@@ -1,0 +1,11 @@
+<Alloy>
+	<!-- Anddroid Window -->
+	<Require src="first_window" id="index" platform="android"/> 
+        
+    <!-- iOS Window -->
+    <Window id="navigation" platform="ios">
+       <NavigationGroup id="nav">
+           <Require id="win1" src="first_window"/>
+       </NavigationGroup>
+	</Window>
+</Alloy>

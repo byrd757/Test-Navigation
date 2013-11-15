@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id="second_window" title="Second Window" fullscreen="false">
+     	<Button id="btnSecondWindow">Second Window</Button>
+    </Window>
+</Alloy>
