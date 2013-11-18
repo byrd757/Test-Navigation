@@ -24,5 +24,15 @@ if (OS_ANDROID) {
 }
 
 $.btnSecondWindow.addEventListener ('click', function () {
+	// include
+	var State = require ('/State');
+
+	// definition
+	var objState = new State('1','California');
+	var objState2 = new State('2','Virginia');
+	var arrState = [objState,objState2];
 	
+	// usage
+	alert(arrState[1].getName());
+
 });

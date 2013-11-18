@@ -1,7 +1,7 @@
 function Controller() {
     function openSecondWindow() {
         var secondViewController = Alloy.createController("second_window").getView();
-        secondViewController.open();
+        Alloy.Globals.navgroup.open(secondViewController);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "first_window";
@@ -25,6 +25,11 @@ function Controller() {
     openSecondWindow ? $.__views.btnLoadSecondWin.addEventListener("click", openSecondWindow) : __defers["$.__views.btnLoadSecondWin!click!openSecondWindow"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var btnRightNav = Ti.UI.createButton({
+        title: "2nd Win"
+    });
+    btnRightNav.addEventListener("click", openSecondWindow);
+    $.win1.rightNavButton = btnRightNav;
     __defers["$.__views.btnLoadSecondWin!click!openSecondWindow"] && $.__views.btnLoadSecondWin.addEventListener("click", openSecondWindow);
     _.extend($, exports);
 }
