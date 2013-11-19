@@ -21,11 +21,9 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.btnSecondWindow.addEventListener("click", function() {
-        var State = require("/State");
-        var objState = new State("1", "California");
-        var objState2 = new State("2", "Virginia");
-        var arrState = [ objState, objState2 ];
-        alert(arrState[1].getName());
+        var SearchResultClass = require("/SearchResultClass");
+        var search = new SearchResultClass();
+        search.getSearchResult(12, 0, 0, 12345e3, CA);
     });
     _.extend($, exports);
 }

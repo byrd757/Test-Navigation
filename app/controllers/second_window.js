@@ -24,6 +24,7 @@ if (OS_ANDROID) {
 }
 
 $.btnSecondWindow.addEventListener ('click', function () {
+	/*
 	// include
 	var State = require ('/State');
 
@@ -34,5 +35,11 @@ $.btnSecondWindow.addEventListener ('click', function () {
 	
 	// usage
 	alert(arrState[1].getName());
-
+    */
+   
+   var SearchResultClass = require ('/SearchResultClass');
+   
+   var search = new SearchResultClass();
+   search.getSearchResult(12, 0, 0, 12345000, CA);
+   
 });
