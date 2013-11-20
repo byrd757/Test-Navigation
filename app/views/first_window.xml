@@ -1,5 +1,6 @@
 <Alloy>
 	<Window id="win1" title="1st Window" backgroundColor="white">
         <Button id="btnLoadSecondWin" title="Load Second Window" onClick="openSecondWindow">
+        <Button top="50" id="btnLoadLeadWin" title="Load Lead Window" onClick="openLeadWindow">
     </Window>
 </Alloy>

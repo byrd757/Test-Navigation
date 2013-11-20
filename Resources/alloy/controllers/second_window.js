@@ -13,30 +13,30 @@ function Controller() {
         fullscreen: "false"
     });
     $.__views.second_window && $.addTopLevelView($.__views.second_window);
-    $.__views.__alloyId1 = Ti.UI.createView({
+    $.__views.__alloyId2 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId1"
+        id: "__alloyId2"
     });
-    $.__views.second_window.add($.__views.__alloyId1);
+    $.__views.second_window.add($.__views.__alloyId2);
     $.__views.btnRegular = Ti.UI.createButton({
         id: "btnRegular",
         top: "0",
         height: "50",
         title: "RegularSearch"
     });
-    $.__views.__alloyId1.add($.__views.btnRegular);
+    $.__views.__alloyId2.add($.__views.btnRegular);
     $.__views.btnLowCost = Ti.UI.createButton({
         id: "btnLowCost",
         top: "35",
         height: "50",
         title: "Low Cost"
     });
-    $.__views.__alloyId1.add($.__views.btnLowCost);
+    $.__views.__alloyId2.add($.__views.btnLowCost);
     $.__views.tblSearchResult = Ti.UI.createTableView({
         id: "tblSearchResult",
         bottom: "0"
     });
-    $.__views.__alloyId1.add($.__views.tblSearchResult);
+    $.__views.__alloyId2.add($.__views.tblSearchResult);
     $.__views.activityIndicator = Ti.UI.createActivityIndicator({
         style: Titanium.UI.iPhone.ActivityIndicatorStyle.DARK,
         id: "activityIndicator",

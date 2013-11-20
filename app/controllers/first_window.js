@@ -8,6 +8,16 @@ function openSecondWindow(e){
     }
 }
 
+function openLeadWindow(e){
+    var leadViewController = Alloy.createController('lead_test').getView();
+    
+    if (OS_IOS) {
+        Alloy.Globals.navgroup.open(leadViewController);   
+    } else if (OS_ANDROID) {
+        leadViewController.open();
+    }
+}
+
 // iOS
 if (OS_IOS) {
 

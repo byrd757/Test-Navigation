@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id="lead_test" title="Submit Lead" fullscreen="false">
+        <View layout="vertical">
+            <Button id="btnSubmit" top="10" height="50" title="Submit Lead"/>
+        </View>
+
+        <ActivityIndicator id="activityIndicator" message="Loading..." />
+    </Window>
+</Alloy>
