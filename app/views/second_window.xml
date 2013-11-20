@@ -1,7 +1,11 @@
 <Alloy>
 	<Window id="second_window" title="Second Window" fullscreen="false">
-     	<Button id="btnRegular" top="0" height=30>RegularSearch</Button>
-     	<Button id="btnLowCost" top="35" height=30>Low Cost</Button>
-     	<TableView id="tblSearchResult" top="200" height="100%"></TableView>
+	    <View layout="vertical">
+            <Button id="btnRegular" top="0" height="50" title="RegularSearch"/>
+            <Button id="btnLowCost" top="35" height="50" title="Low Cost"/>
+            <TableView id="tblSearchResult" bottom="0"/>
+	    </View>
+
+     	<ActivityIndicator id="activityIndicator" message="Loading..." />
     </Window>
 </Alloy>

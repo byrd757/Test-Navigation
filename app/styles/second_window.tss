@@ -1,4 +1,10 @@
 
-".container" : {
-  
+"#activityIndicator[platform=ios]": {
+  style : Titanium.UI.iPhone.ActivityIndicatorStyle.DARK,
+ 
+}
+
+"#activityIndicator[platform=android]": {
+  style : Titanium.UI.ActivityIndicatorStyle.DARK,
+ 
 }

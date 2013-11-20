@@ -22,7 +22,7 @@ if (OS_ANDROID) {
         $.second_window = null;
     });     
 }
-
+$.activityIndicator.hide();
 $.btnRegular.addEventListener ('click', function () {
 	/*
 	// include
@@ -36,32 +36,51 @@ $.btnRegular.addEventListener ('click', function () {
 	// usage
 	alert(arrState[1].getName());
     */
-   
+   $.activityIndicator.show();
    var SearchResultClass = require ('/SearchResultClass');
-   
+   var tableData=[];
    var search = new SearchResultClass("Regular");
-   search.getSearchResult(12, '', '', 0, 12345000, 12 , function (arrayResult) {
-       alert (arrayResult[20].getTitle());
-       
-   });
-   
+   var argsSearch = {
+        catId : 12,
+        subCatId : '',
+        lowInvestment : '',
+        highInvestment : 12345000,
+        location : 12
+   };
+   search.getSearchResult(argsSearch , function (arrayResult) {
+        for (var i = 0; i < arrayResult.length; i++) {
+            var args = {
+                title : arrayResult[i].getTitle(),
+                image : arrayResult[i].getLogo(),
+                customView : 'view' + i
+            };
+            tableData.push(Alloy.createController('menurow', args).getView());
+        }
+        $.tblSearchResult.setData(tableData);
+        $.activityIndicator.hide();
+   });   
 });
 
 $.btnLowCost.addEventListener ('click', function () {
-
-   var SearchResultClass = require ('/SearchResultClass');
-   var tableData=[];
-   var search = new SearchResultClass("LowCost");
-   search.getSearchResult(null, null, null, 0, 50000, null , function (arrayResult) {
+    $.activityIndicator.show();
+    var SearchResultClass = require ('/SearchResultClass');
+    var tableData=[];
+    var search = new SearchResultClass("LowCost");
+    var argsSearch = {
+        lowInvestment : 0,
+        highInvestment : 50000
+    };
+    search.getSearchResult(argsSearch , function (arrayResult) {
         for (var i = 0; i < arrayResult.length; i++) {
-        var args = {
-            title : arrayResult[i].getTitle(),
-            image : arrayResult[i].getLogo(),
-            customView : 'view' + i
-        };
-        tableData.add(Alloy.createController('menurow', args).getView());
-    }
-    $.tblSearchResult.setData(tableData);
-   });
+            var args = {
+                title : arrayResult[i].getTitle(),
+                image : arrayResult[i].getLogo(),
+                customView : 'view' + i
+            };
+            tableData.push(Alloy.createController('menurow', args).getView());
+        }
+        $.tblSearchResult.setData(tableData);
+        $.activityIndicator.hide();
+    });
    
 });
