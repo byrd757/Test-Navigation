@@ -39,7 +39,7 @@ $.btnSecondWindow.addEventListener ('click', function () {
    
    var SearchResultClass = require ('/SearchResultClass');
    
-   var search = new SearchResultClass();
-   search.getSearchResult(12, 0, 0, 12345000, CA);
+   var search = new SearchResultClass("test");
+   search.getSearchResult(12, '', 0, 12345000, 12);
    
 });
