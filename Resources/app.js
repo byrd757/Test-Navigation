@@ -6,4 +6,8 @@ Alloy.Globals.Styles = {
     }
 };
 
+Ti.App.Properties.setString("Server-Dev", "http://apps.franchisesolutions.com/webservices-dev");
+
+Ti.App.Properties.setString("Server", "http://apps.franchisesolutions.com/webservices");
+
 Alloy.createController("index");

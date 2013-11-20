@@ -1,5 +1,5 @@
 if (OS_IOS) {
-    Alloy.Globals.navgroup = $.nav;  
+    Alloy.Globals.navgroup = $.nav; 
     $.navigation.open();
 } else if (OS_ANDROID) {
     $.index.getView().open();

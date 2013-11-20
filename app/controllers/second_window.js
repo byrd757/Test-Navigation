@@ -23,7 +23,7 @@ if (OS_ANDROID) {
     });     
 }
 
-$.btnSecondWindow.addEventListener ('click', function () {
+$.btnRegular.addEventListener ('click', function () {
 	/*
 	// include
 	var State = require ('/State');
@@ -39,7 +39,29 @@ $.btnSecondWindow.addEventListener ('click', function () {
    
    var SearchResultClass = require ('/SearchResultClass');
    
-   var search = new SearchResultClass("test");
-   search.getSearchResult(12, '', 0, 12345000, 12);
+   var search = new SearchResultClass("Regular");
+   search.getSearchResult(12, '', '', 0, 12345000, 12 , function (arrayResult) {
+       alert (arrayResult[20].getTitle());
+       
+   });
+   
+});
+
+$.btnLowCost.addEventListener ('click', function () {
+
+   var SearchResultClass = require ('/SearchResultClass');
+   var tableData=[];
+   var search = new SearchResultClass("LowCost");
+   search.getSearchResult(null, null, null, 0, 50000, null , function (arrayResult) {
+        for (var i = 0; i < arrayResult.length; i++) {
+        var args = {
+            title : arrayResult[i].getTitle(),
+            image : arrayResult[i].getLogo(),
+            customView : 'view' + i
+        };
+        tableData.add(Alloy.createController('menurow', args).getView());
+    }
+    $.tblSearchResult.setData(tableData);
+   });
    
 });

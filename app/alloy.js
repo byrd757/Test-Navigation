@@ -23,3 +23,6 @@ Alloy.Globals.Styles = {
         'height' : 45
     }
 };
+
+Ti.App.Properties.setString('Server-Dev', 'http://apps.franchisesolutions.com/webservices-dev');
+Ti.App.Properties.setString('Server', 'http://apps.franchisesolutions.com/webservices');

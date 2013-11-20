@@ -1,5 +1,7 @@
 <Alloy>
 	<Window id="second_window" title="Second Window" fullscreen="false">
-     	<Button id="btnSecondWindow">Second Window</Button>
+     	<Button id="btnRegular" top="0" height=30>RegularSearch</Button>
+     	<Button id="btnLowCost" top="35" height=30>Low Cost</Button>
+     	<TableView id="tblSearchResult" top="200" height="100%"></TableView>
     </Window>
 </Alloy>
