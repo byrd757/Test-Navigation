@@ -8,6 +8,7 @@ function LeadFormClass() {
 
 LeadFormClass.prototype.submitLeadForm = function(lf , callback) {
     arraySearchResults = [];
+
     var searchURL = ((Titanium.App.deployType=='production')?Ti.App.Properties.getString('Server'):Ti.App.Properties.getString('Server-Dev')) +
     '/leadmanagement.php?&email=' + lf.getEmail() + '&firstname=' + lf.getFirstName() + '&lastname=' + lf.getLastName() + '&state=' + lf.getStateId() + 
     '&zipcode=' + lf.getZipcode() + '&country=' + lf.getCountry() + '&phone=' + lf.getPhone() + '&investment=' + lf.getInvestmentId () + 
@@ -35,12 +36,12 @@ LeadFormClass.prototype.submitLeadForm = function(lf , callback) {
                         // Ti.API.info(objSearchResult.getTitle());
                     // }
                 // }
-                // callback (arraySearchResults);                
+                callback (true);                
             },
             onerror: function(e) {
                 Ti.API.debug("STATUS: " + this.status);
                 // Error handler
-                callback (null);
+                callback (false);
             },
             timeout:10000
         });

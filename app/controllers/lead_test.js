@@ -33,9 +33,16 @@ $.btnSubmit.addEventListener ('click', function () {
 
    var tableData=[];
    var clsLeadForm = new LeadFormClass();
-   var objLeadForm = new LeadForm('test@franchisesolutions.com' ,'Test','Tester',12,23451,'','1231231234','123','newsletter','fbolist','iraList','ipad');
 
-   clsLeadForm.submitLeadForm(objLeadForm , function () {
+    // zipcode=123445&timeframe=3&phone=(123)456-7891&investment=40000&newsletter=1&fbolist=10072&source=iphone
+   var objLeadForm = new LeadForm('test@franchisesolutions.com' ,'Test','Tester','CA',23451,'','1231231234',40000,1,10072,'','ipad');
+
+   clsLeadForm.submitLeadForm(objLeadForm , function (result) {
+        if (result) {
+            alert ('New lead inserted successfully!');
+        } else {
+            alert ('Error');
+        }
         // for (var i = 0; i < arrayResult.length; i++) {
             // var args = {
                 // title : arrayResult[i].getTitle(),
