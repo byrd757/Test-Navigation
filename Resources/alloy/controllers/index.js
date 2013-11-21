@@ -6,25 +6,20 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.navigation = Ti.UI.createWindow({
-        backgroundColor: "white",
-        id: "navigation"
-    });
-    $.__views.navigation && $.addTopLevelView($.__views.navigation);
     $.__views.win1 = Alloy.createController("first_window", {
         id: "win1"
     });
-    $.__views.nav = Ti.UI.iPhone.createNavigationGroup({
+    $.__views.nav = Ti.UI.iOS.createNavigationWindow({
         window: $.__views.win1.getViewEx({
             recurse: true
         }),
         id: "nav"
     });
-    $.__views.navigation.add($.__views.nav);
+    $.__views.nav && $.addTopLevelView($.__views.nav);
     exports.destroy = function() {};
     _.extend($, $.__views);
     Alloy.Globals.navgroup = $.nav;
-    $.navigation.open();
+    $.nav.open();
     _.extend($, exports);
 }
 

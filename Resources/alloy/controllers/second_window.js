@@ -9,7 +9,7 @@ function Controller() {
     $.__views.second_window = Ti.UI.createWindow({
         backgroundColor: "white",
         id: "second_window",
-        title: "Second Window",
+        title: "Search Result",
         fullscreen: "false"
     });
     $.__views.second_window && $.addTopLevelView($.__views.second_window);

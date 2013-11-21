@@ -1,11 +1,11 @@
 function Controller() {
     function openSecondWindow() {
         var secondViewController = Alloy.createController("second_window").getView();
-        Alloy.Globals.navgroup.open(secondViewController);
+        Alloy.Globals.navgroup.openWindow(secondViewController);
     }
     function openLeadWindow() {
         var leadViewController = Alloy.createController("lead_test").getView();
-        Alloy.Globals.navgroup.open(leadViewController);
+        Alloy.Globals.navgroup.openWindow(leadViewController);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "first_window";
@@ -23,14 +23,14 @@ function Controller() {
     $.__views.win1 && $.addTopLevelView($.__views.win1);
     $.__views.btnLoadSecondWin = Ti.UI.createButton({
         id: "btnLoadSecondWin",
-        title: "Load Second Window"
+        title: "Search Result"
     });
     $.__views.win1.add($.__views.btnLoadSecondWin);
     openSecondWindow ? $.__views.btnLoadSecondWin.addEventListener("click", openSecondWindow) : __defers["$.__views.btnLoadSecondWin!click!openSecondWindow"] = true;
     $.__views.btnLoadLeadWin = Ti.UI.createButton({
         top: "50",
         id: "btnLoadLeadWin",
-        title: "Load Lead Window"
+        title: "Lead"
     });
     $.__views.win1.add($.__views.btnLoadLeadWin);
     openLeadWindow ? $.__views.btnLoadLeadWin.addEventListener("click", openLeadWindow) : __defers["$.__views.btnLoadLeadWin!click!openLeadWindow"] = true;

@@ -2,7 +2,7 @@ function openSecondWindow(e){
 	var secondViewController = Alloy.createController('second_window').getView();
 	
     if (OS_IOS) {
-        Alloy.Globals.navgroup.open(secondViewController);   
+        Alloy.Globals.navgroup.openWindow(secondViewController);   
     } else if (OS_ANDROID) {
         secondViewController.open();
     }
@@ -12,7 +12,7 @@ function openLeadWindow(e){
     var leadViewController = Alloy.createController('lead_test').getView();
     
     if (OS_IOS) {
-        Alloy.Globals.navgroup.open(leadViewController);   
+        Alloy.Globals.navgroup.openWindow(leadViewController);   
     } else if (OS_ANDROID) {
         leadViewController.open();
     }
