@@ -1,0 +1,3 @@
+function showOptions(){
+    $.dialog.show();
+}

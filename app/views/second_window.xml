@@ -1,7 +1,7 @@
 <Alloy>
 	<Window id="second_window" title="Search Result" fullscreen="false">
 	    <View layout="vertical">
-            <Button id="btnRegular" top="0" height="50" title="RegularSearch"/>
+            <Button id="btnRegular" top="60" height="50" title="RegularSearch"/>
             <Button id="btnLowCost" top="35" height="50" title="Low Cost"/>
             <TableView id="tblSearchResult" bottom="0"/>
 	    </View>

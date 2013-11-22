@@ -1,0 +1,36 @@
+<Alloy>
+    <!-- Android Picker -->
+    <View id='viewPicker' class="container" height="300" bottom="-300" layout="vertical" platform="android">
+        <View id="viewHeader" layout="horizontal" backgroundColor="white" width="100%" height="60">
+            <View width="33%" backgroundColor="red" layout="horizontal">
+                <Button left="10" title="<"></Button>
+                <Button left="10" title=">"></Button>
+            </View>
+            <View width="34%" backgroundColor="green">
+                <Label>Title</Label>
+            </View>
+            <View width="32.9%" backgroundColor="blue">
+                <Button id="btnClose" right="10">Exit</Button>
+            </View>
+        </View>
+        <TableView id="tblPicker"></TableView>
+    </View>
+
+    <!-- iOS Picker -->
+    <View id='viewPicker' class="container" height="255" bottom="-255" layout="vertical" platform="ios">
+        <View id="viewHeader" layout="horizontal" backgroundColor="white" width="100%" height="40">
+            <View width="33%" backgroundColor="red" layout="horizontal">
+                <Button left="10" title="<"></Button>
+                <Button left="10" title=">"></Button>
+            </View>
+            <View width="34%" backgroundColor="green">
+                <Label>Title</Label>
+            </View>
+            <View width="32.9%" backgroundColor="blue">
+                <Button id="btnClose" right="10">Exit</Button>
+            </View>
+        </View>
+        
+        <Picker id="picker" selectionIndicator="true"></Picker>
+	</View>
+</Alloy>

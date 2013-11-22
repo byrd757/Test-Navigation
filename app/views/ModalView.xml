@@ -1,0 +1,35 @@
+<Alloy>
+	<Window id="modalWin" modal="true" layout="vertical">
+	    <View id="viewHeader" layout="horizontal" backgroundColor="white" width="100%" height="50">
+	        <View width="33%" backgroundColor="red">
+	            <Button left="10">Exit</Button>
+	        </View>
+	        <View width="34%" backgroundColor="green">
+                <Label>Title</Label>
+            </View>
+            <View width="32.9%" backgroundColor="blue">
+                <Button right="10">Add</Button>
+            </View>
+	    </View>
+	    <Label onClick="showOptions"> Test </Label>
+	    
+	    <OptionDialog id="dialog" title="Delete File?">
+
+            <!-- The Options tag sets the options property. -->
+            <Options>
+                <Option>Confirm</Option>
+                <Option platform="ios">Help</Option>
+                <Option>Cancel</Option>
+            </Options>
+
+            <!-- The ButtonNames tag sets the Android-only buttonNames property. -->
+            <ButtonNames>
+                <ButtonName>Confirm</ButtonName>
+            </ButtonNames>
+
+            <!-- Add a View for the androidView property here. -->
+
+        </OptionDialog>
+        
+	</Window>
+</Alloy>
