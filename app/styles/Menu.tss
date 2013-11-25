@@ -1,0 +1,71 @@
+
+".menuHeader":
+{
+	height:'50', 
+	width:'fill',
+	textAlign:'center',
+	backgroundColor:'black',
+	color:'white',
+}
+// "#menuTable":
+// {
+	// top:0,
+	// width:'auto',
+	// height:'auto',
+	// title:'Main Menu',
+	// right:'25%',
+	// borderColor:'blue',
+	// borderWidth:5,
+	// separatorColor:'blue',
+	// backgroundColor:'#000000',
+// },
+// 
+// 
+// "#menuDashLabel":
+// {
+	// backgroundColor:'#0420D2',
+	// text:'Dashboard',
+	// textAlign:'center',
+	// color:'#ffffff',
+	// width:'100%',
+	// right:'25%',
+	// height:'10%',
+	// top:0,
+	// backgroundImage:'',
+	// font:{fontSize:20, fontFamily:"Arial", fontWeight:'bold'},
+// },
+// "#menuDashboardTable":
+// {
+	// top:0,
+	// right:'25%',
+	// height:'100',
+	// borderColor:'blue',
+	// borderWidth:5,
+	// separatorColor:'blue',
+	// backgroundColor:'#0420D2',
+// },
+// 
+// "#menuGeneralLabel":
+// {
+	// backgroundColor:'#04AF1A',
+	// text:'About Us',
+	// textAlign:'center',
+	// color:'#ffffff',
+	// width:'100%',
+	// height:'10%',
+	// top:0,
+	// right:'25%',
+	// font:{fontSize:20, fontFamily:"Arial", fontWeight:'bold'},
+// },
+// "#menuGeneralTable":
+// {
+	// bottom:0,
+	// top:0,
+	// left:0,
+	// right:'25%',
+	// height:0,
+	// borderColor:'blue',
+	// borderWidth:5,
+	// separatorColor:'blue',
+	// backgroundColor:'#04AF1A',
+// }

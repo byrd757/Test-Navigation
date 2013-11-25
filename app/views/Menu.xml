@@ -1,0 +1,63 @@
+<Alloy>
+    <Window id="menu" >
+        <View class="menu" layout="vertical" top="0" bottom="0" left="0" width="80%">
+            <View id="viewFirstSection" top="0" height="86%" layout="vertical">
+                <Label id='lblFirstSection' class="menuHeader">Search</Label>
+                <TableView id="tblFirstSection" height="100%">
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn11" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn12" width="50%" image="/images/contact.png"/>
+                        </View>
+                    </TableViewRow>
+                </TableView>
+            </View>
+            <View id="viewSecondSection" height="7%" layout="vertical">
+                <Label id='lblSecondSection' class="menuHeader">Second</Label>
+                <TableView id="tblSecondSection" height="0%">
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn21" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn22" width="50%" image="/images/contact.png"/>
+                        </View>
+                    </TableViewRow>
+                </TableView>
+            </View>
+            <View id="viewThirdSection" height="7%" layout="vertical" bottom="0">
+                <Label id='lblThirdSection' class="menuHeader">Third</Label>
+                <TableView id="tblThirdSection" height="0%">
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn31" width="50%"  image="/images/search.png"/>
+                            <ImageView id="btn32" width="50%" image="/images/contact.png" />
+                        </View>
+                    </TableViewRow>
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn31" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn32" width="50%" image="/images/contact.png" />
+                        </View>
+                    </TableViewRow>
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn31" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn32" width="50%" image="/images/contact.png" />
+                        </View>
+                    </TableViewRow>
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn31" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn32" width="50%" image="/images/contact.png" />
+                        </View>
+                    </TableViewRow>
+                    <TableViewRow width="100%" selectionStyle="NONE">
+                        <View layout="horizontal">
+                            <ImageView id="btn31" width="50%" image="/images/search.png"/>
+                            <ImageView id="btn32" width="50%" image="/images/contact.png" />
+                        </View>
+                    </TableViewRow>
+                </TableView>
+            </View>
+        </View>
+    </Window>
+</Alloy>

@@ -38,42 +38,48 @@ function Controller() {
     $.__views.win1 = Ti.UI.createWindow({
         backgroundColor: "white",
         id: "win1",
-        title: "1st Window"
+        title: "1st Window",
+        width: "100%"
     });
     $.__views.win1 && $.addTopLevelView($.__views.win1);
-    $.__views.__alloyId28 = Ti.UI.createView({
-        backgroundColor: "white",
+    $.__views.__alloyId47 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId28"
+        id: "__alloyId47"
     });
-    $.__views.win1.add($.__views.__alloyId28);
+    $.__views.win1.add($.__views.__alloyId47);
+    $.__views.viewMain = Ti.UI.createView({
+        id: "viewMain",
+        backgroundColor: "white",
+        layout: "vertical"
+    });
+    $.__views.__alloyId47.add($.__views.viewMain);
     $.__views.btnLoadSecondWin = Ti.UI.createButton({
         top: "10",
         id: "btnLoadSecondWin",
         title: "Search Result"
     });
-    $.__views.__alloyId28.add($.__views.btnLoadSecondWin);
+    $.__views.viewMain.add($.__views.btnLoadSecondWin);
     openSecondWindow ? $.__views.btnLoadSecondWin.addEventListener("click", openSecondWindow) : __defers["$.__views.btnLoadSecondWin!click!openSecondWindow"] = true;
     $.__views.btnLoadLeadWin = Ti.UI.createButton({
         top: "10",
         id: "btnLoadLeadWin",
         title: "Lead"
     });
-    $.__views.__alloyId28.add($.__views.btnLoadLeadWin);
+    $.__views.viewMain.add($.__views.btnLoadLeadWin);
     openLeadWindow ? $.__views.btnLoadLeadWin.addEventListener("click", openLeadWindow) : __defers["$.__views.btnLoadLeadWin!click!openLeadWindow"] = true;
     $.__views.btnLoadModal = Ti.UI.createButton({
         top: "10",
         id: "btnLoadModal",
         title: "Modal"
     });
-    $.__views.__alloyId28.add($.__views.btnLoadModal);
+    $.__views.viewMain.add($.__views.btnLoadModal);
     openModal ? $.__views.btnLoadModal.addEventListener("click", openModal) : __defers["$.__views.btnLoadModal!click!openModal"] = true;
     $.__views.btnLoadPicker = Ti.UI.createButton({
         top: "10",
         id: "btnLoadPicker",
         title: "Picker"
     });
-    $.__views.__alloyId28.add($.__views.btnLoadPicker);
+    $.__views.viewMain.add($.__views.btnLoadPicker);
     openPicker ? $.__views.btnLoadPicker.addEventListener("click", openPicker) : __defers["$.__views.btnLoadPicker!click!openPicker"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
@@ -97,11 +103,35 @@ function Controller() {
     var slide_in = Titanium.UI.createAnimation({
         bottom: 0
     });
-    var btnRightNav = Ti.UI.createButton({
-        title: "2nd Win"
+    var btnLeftNav = Ti.UI.createButton({
+        title: "Menu",
+        toggle: false
     });
-    btnRightNav.addEventListener("click", openSecondWindow);
-    $.win1.rightNavButton = btnRightNav;
+    btnLeftNav.addEventListener("click", function(e) {
+        Ti.App.fireEvent("menuhit", e);
+    });
+    $.win1.leftNavButton = btnLeftNav;
+    var view = Ti.UI.createView({
+        layout: "horizontal"
+    });
+    var btnRightNav1 = Ti.UI.createButton({
+        title: "Help"
+    });
+    btnRightNav1.addEventListener("click", function() {
+        alert("no.1");
+    });
+    var btnRightNav2 = Ti.UI.createButton({
+        title: "Menu"
+    });
+    btnRightNav2.addEventListener("click", function() {
+        alert("no.2");
+    });
+    view.add(btnRightNav1);
+    view.add(btnRightNav2);
+    $.win1.titleControl = view;
+    Ti.App.addEventListener("btnclicked", function(e) {
+        alert(e.value);
+    });
     __defers["$.__views.btnLoadSecondWin!click!openSecondWindow"] && $.__views.btnLoadSecondWin.addEventListener("click", openSecondWindow);
     __defers["$.__views.btnLoadLeadWin!click!openLeadWindow"] && $.__views.btnLoadLeadWin.addEventListener("click", openLeadWindow);
     __defers["$.__views.btnLoadModal!click!openModal"] && $.__views.btnLoadModal.addEventListener("click", openModal);

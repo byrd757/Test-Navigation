@@ -1,10 +1,16 @@
 <Alloy>
-	<Window id="win1" title="1st Window">
-	    <View backgroundColor="white" layout="vertical">
-            <Button top="10" id="btnLoadSecondWin" title="Search Result" onClick="openSecondWindow">
-            <Button top="10" id="btnLoadLeadWin" title="Lead" onClick="openLeadWindow">
-            <Button top="10" id="btnLoadModal" title="Modal" onClick="openModal">
-            <Button top="10" id="btnLoadPicker" title="Picker" onClick="openPicker">
+	<Window id="win1" title="1st Window" width="100%">
+        <View layout="vertical">
+            <Require src="android_navigationbar" id="android_nav" platform="android"/> 
+	    
+    	    <View id="viewMain" backgroundColor="white" layout="vertical">
+                <Button top="10" id="btnLoadSecondWin" title="Search Result" onClick="openSecondWindow">
+                <Button top="10" id="btnLoadLeadWin" title="Lead" onClick="openLeadWindow">
+                <Button top="10" id="btnLoadModal" title="Modal" onClick="openModal">
+                <Button top="10" id="btnLoadPicker" title="Picker" onClick="openPicker">
+            </View>
+        
         </View>
     </Window>
+     
 </Alloy>

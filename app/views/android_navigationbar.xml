@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="andoid_navbar" width="100%" height="50" backgroundColor="black" layout="horizontal">
+	    <Button id="btnMenu">Menu</Button>
+	    <Label color="white">test</Label>
+	</View>
+</Alloy>
